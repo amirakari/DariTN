@@ -1,0 +1,171 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+	<ui:param name="page_name" value="Manipuler l'utilisateur" />
+	<ui:define name="content">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+		<h:panelGroup columns="2">
+			<h:form>
+				<table>
+					<tr>
+						<td><h:outputText value="Email"></h:outputText></td>
+						<td><h:inputText value="#{userController.email}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Mot de Passe"></h:outputText></td>
+						<td><h:inputSecret value="#{userController.password}"></h:inputSecret></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Nom"></h:outputText></td>
+						<td><h:inputText value="#{userController.nom}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Prenom"></h:outputText></td>
+						<td><h:inputText value="#{userController.prenom}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Adresse"></h:outputText></td>
+						<td><h:inputText value="#{userController.adresse}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Profession"></h:outputText></td>
+						<td><h:inputText value="#{userController.profession}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Relation"></h:outputText></td>
+						<td><h:inputText value="#{userController.relation}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Username"></h:outputText></td>
+						<td><h:inputText value="#{userController.username}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="CIN"></h:outputText></td>
+						<td><h:inputText value="#{userController.cin}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="numéro téléphonique"></h:outputText></td>
+						<td><h:inputText value="#{userController.tel}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Code postal"></h:outputText></td>
+						<td><h:inputText value="#{userController.codepostal}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputLabel for="button" value="Date de naissance" /></td>
+						<td><p:datePicker id="button"
+								value="#{userController.datenaissance}" showIcon="true" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Type"></h:outputText></td>
+						<td><h:selectOneMenu value="#{userController.type}">
+								<f:selectItem itemLabel="Choisir le type" itemValue="#{null}" />
+								<f:selectItems value="#{userController.types}" />
+							</h:selectOneMenu></td>
+					</tr>
+					<tr>
+						<td colspan="2"><h:commandButton value="Ajouter User"
+								action="#{userController.addUser()}" /></td>
+						<td colspan="2"><h:commandButton value="Mettre A jour Employé" action="#{userController.modifyUser()}" /></td>
+					</tr>
+				</table>
+			</h:form>
+		</h:panelGroup>
+
+		<h:panelGroup columns="2">
+			<h:form>
+				<h:dataTable value="#{userController.users}" var="user" border="1">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Email" />
+						</f:facet>
+						<h:outputText value="#{user.email}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Prenom" />
+						</f:facet>
+						<h:outputText value="#{user.prenom}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Nom" />
+						</f:facet>
+						<h:outputText value="#{user.nom}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Type" />
+						</f:facet>
+						<h:outputText value="#{user.type}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Password" />
+						</f:facet>
+						<h:outputText value="#{user.password}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Username" />
+						</f:facet>
+						<h:outputText value="#{user.username}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="CIN" />
+						</f:facet>
+						<h:outputText value="#{user.cin}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Numéro Téléphonique" />
+						</f:facet>
+						<h:outputText value="#{user.tel}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Code postal" />
+						</f:facet>
+						<h:outputText value="#{user.codepostal}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Adresse" />
+						</f:facet>
+						<h:outputText value="#{user.adresse}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Profession" />
+						</f:facet>
+						<h:outputText value="#{user.profession}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Relation" />
+						</f:facet>
+						<h:outputText value="#{user.relation}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Date de naissance" />
+						</f:facet>
+						<h:outputText value="#{user.datenaissance}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Action" />
+						</f:facet>
+						<h:commandButton
+							action="#{userController.removeUser(user.id)}"
+							value="Supprimer" />
+							<h:commandButton action="#{userController.displayUser(user)}" value="Afficher" />
+					</h:column>
+				</h:dataTable>
+			</h:form>
+		</h:panelGroup>
+	</ui:define>
+</ui:composition>

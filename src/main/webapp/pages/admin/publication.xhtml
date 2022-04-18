@@ -1,0 +1,79 @@
+  <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+	<ui:param name="page_name" value="Manipuler l'utilisateur" />
+	<ui:define name="content">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+		<h:panelGroup columns="2">
+			<h:form>
+				<table>
+					<tr>
+						<td><h:outputText value="Date début"></h:outputText></td>
+						<td><h:inputText value="#{subscripController.dateDebut}"><f:convertDateTime pattern="yyyy-MM-dd" /></h:inputText>
+						
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Date fin"></h:outputText></td>
+						<td><h:inputText value="#{subscripController.dateFin}"><f:convertDateTime pattern="yyyy-MM-dd" /></h:inputText>
+						
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Code"></h:outputText></td>
+						<td><h:inputText value="#{subscripController.code}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="User"></h:outputText></td>
+						<td><h:inputText value="#{subscripController.user}"></h:inputText></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2"><h:commandButton value="Ajouter abonnement"
+								action="#{subscripController.addSubscription()}" /></td>
+						
+					</tr>
+				</table>
+			</h:form>
+		</h:panelGroup>
+		<h:panelGroup columns="2">
+			<h:form>
+				<h:dataTable value="#{subscripController.subs}" var="sub" border="1">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Date Début" />
+						</f:facet>
+							<h:outputText value="#{sub.dateDebut}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Date Fin" />
+						</f:facet>
+							<h:outputText value="#{sub.dateFin}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Code" />
+						</f:facet>
+							<h:outputText value="#{sub.code}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="prix" />
+						</f:facet>
+							<h:outputText value="#{sub.prix}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="User_id" />
+						</f:facet>
+							<h:outputText value="#{sub.user}" />
+					</h:column>
+				</h:dataTable>
+			</h:form>
+		</h:panelGroup>
+		
+	</ui:define>
+</ui:composition>

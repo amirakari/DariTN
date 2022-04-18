@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<title>#{page_name}</title>
+<link href="../../resources/assets/css/vendo.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/font-awesome.css"
+				rel="stylesheet" />
+			<link href="../../resources/assets/css/theme-light_blue-beige.css"
+				rel="stylesheet" />
+			<link href="../..resources/assets/css/custom.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/ie-fix.css" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet"
+				type="image/x-icon" />
+</h:head>
+
+<body>
+
+<ui:include src="/template/header1.xhtml" />
+
+<ui:insert name="menu" />
+
+<br /><br />
+		<center>
+	<h:panelGrid columns="3" cellpadding="5">
+	
+				<h:form>
+					<p:chart align="right" type="bar" model="#{chartView.barModel}" style="height:300px"/>
+					<br /><br />
+					<p:chart align="right" type="bar" model="#{chartView1.barModel}" style="height:300px"/>
+					 
+              
+				</h:form>
+			</h:panelGrid>
+			
+		</center>
+		<br /><br />
+		<br /><br />
+			<ui:insert name="content" />
+		<ui:include src="/template/footer.xhtml" />
+		
+</body>
+</html>
+ 

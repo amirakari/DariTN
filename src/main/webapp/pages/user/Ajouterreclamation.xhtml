@@ -1,0 +1,79 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+		<!-- BEGIN : TP1 JSF Introduction Login -->
+
+
+
+
+
+		<h:head>
+
+			<link href="../../resources/assets/css/vendo.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/font-awesome.css"
+				rel="stylesheet" />
+			<link href="../../resources/assets/css/theme-light_blue-beige.css"
+				rel="stylesheet" />
+			<link href="../..resources/assets/css/custom.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/ie-fix.css" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet"
+				type="image/x-icon" />
+
+		</h:head>
+
+
+
+
+
+
+
+
+
+
+
+		<body>
+			<h:panelGroup columns="2">
+				<h:form>
+					<table>
+						<tr>
+							<td><h:outputText value="Code de validation"></h:outputText></td>
+							<td><h:inputText value="#{assuranceController.code}"></h:inputText></td>
+						</tr>
+
+						<tr>
+							<td><h:outputText value="Date début"></h:outputText></td>
+							<td><p:datePicker id="button"
+									value="#{assuranceController.datedeb}" showIcon="true" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="Date fin"></h:outputText></td>
+							<td><p:datePicker id="button1"
+									value="#{assuranceController.datefin}" showIcon="true" /></td>
+						</tr>
+
+						<tr>
+							<td><h:outputText value="Entreprise"></h:outputText></td>
+							<td><h:selectOneMenu value="#{assuranceController.entreprise}">
+									<f:selectItem itemLabel ="" itemValue="#{null}" />
+									<f:selectItems value ="#{assuranceController.entreprises}" />
+									</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2"><h:commandButton type="submit"
+									class="form__submit" value="Ajouter Abonnement"
+									action="#{assuranceController.addAssurance()}" /></td>
+						</tr>
+						<tr><td colspan="2"><h:commandButton type="submit" class="form__submit" value="Calculer prix" action="#{assuranceController.modifyPrix()}" /></td></tr>
+					</table>
+				</h:form>
+			</h:panelGroup>
+		</body>
+
+	</ui:define>
+</ui:composition>

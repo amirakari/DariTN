@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<title>#{page_name}</title>
+<link href="../../resources/assets/css/vendor.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/font-awesome.css"
+				rel="stylesheet" />
+			<link href="../../resources/assets/css/theme-light_blue-beige.css"
+				rel="stylesheet" />
+			<link href="../..resources/assets/css/custom.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/ie-fix.css" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet"
+				type="image/x-icon" />
+</h:head>
+<body>
+<ui:include src="/template/header1.xhtml" />
+<ui:insert name="menu" />
+	
+				      <p:growl id="messages" showDetail="true" />
+ 
+				
+					<h:form enctype="multipart/form-data">        
+   					 <p:fileUpload value="#{fileUploadView.file}" mode="simple" skinSimple="true"/>
+   					 <br />
+    				<p:commandButton value="Submit" ajax="false" action="#{fileUploadView.upload}" disabled="false" />
+					</h:form>
+ 
+
+
+				
+			<ui:insert name="content" />
+		<ui:include src="/template/footer.xhtml" />
+		
+</body>
+</html>
+ 

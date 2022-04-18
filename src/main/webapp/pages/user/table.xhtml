@@ -1,0 +1,276 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+		<!-- BEGIN : TP1 JSF Introduction Login -->
+
+
+
+
+
+		<h:head>
+
+			<link href="../../resources/assets/css/vendo.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/font-awesome.css"
+				rel="stylesheet" />
+			<link href="../../resources/assets/css/theme-light_blue-beige.css"
+				rel="stylesheet" />
+			<link href="../..resources/assets/css/custom.css" rel="stylesheet" />
+			<link href="../../resources/assets/css/ie-fix.css" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet" />
+			<link href="../../resources/assets/img/favicon.ico" rel="stylesheet"
+				type="image/x-icon" />
+
+		</h:head>
+
+
+
+
+
+
+
+
+
+
+
+		<body>
+                <h:panelGroup class="site__main">
+                  <h:panelGroup class="widget js-widget widget--main">
+                    <h:panelGroup class="widget__content">
+                      <h:panelGroup class="datatable datatable--properties">
+                        <h:panelGroup class="datatable__wrap">
+                          <table class="js-properties-table datatable__table">
+                            <thead>
+                              <tr>
+                                <th class="datatable__head-1">Location Address</th>
+                                <th class="datatable__head-2 datatable__head-sort">Commision</th>
+                                <th class="datatable__head-3 datatable__head-sort">Price</th>
+                                <th class="datatable__head-4 datatable__head-sort">Date</th>
+                                <th class="datatable__head-5">Details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">401 South Sycamore Street  Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2"><strong> 2</strong> %
+                                </td>
+                                <td class="datatable__cell-3">8780</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">649 West Adams Boulevard Los Angeles, CA 90007, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">4,555</td>
+                                <td class="datatable__cell-4">5 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">958 Dewey Avenue Los Angeles, CA 90006, USA</td>
+                                <td class="datatable__cell-2"><strong> 5</strong> %
+                                </td>
+                                <td class="datatable__cell-3">86,723</td>
+                                <td class="datatable__cell-4">6 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1026 Ohio Avenue Long Beach, CA 90804, USA</td>
+                                <td class="datatable__cell-2">$<strong>179</strong>
+                                </td>
+                                <td class="datatable__cell-3">511,789</td>
+                                <td class="datatable__cell-4">8 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">514 East Myrtle Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2"><strong> 8</strong> %
+                                </td>
+                                <td class="datatable__cell-3">79,560</td>
+                                <td class="datatable__cell-4">10 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1230 Martin Luther King Los Angeles, CA 90037, USA</td>
+                                <td class="datatable__cell-2">$<strong>550</strong>
+                                </td>
+                                <td class="datatable__cell-3">2,255</td>
+                                <td class="datatable__cell-4">12 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">401 South Sycamore Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2">$<strong>790</strong>
+                                </td>
+                                <td class="datatable__cell-3">6,218,780</td>
+                                <td class="datatable__cell-4">15 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">649 West Adams Boulevard Los Angeles, CA 90007, USA</td>
+                                <td class="datatable__cell-2"><strong> 4</strong> %
+                                </td>
+                                <td class="datatable__cell-3">3,100</td>
+                                <td class="datatable__cell-4">18 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">958 Dewey Avenue Los Angeles, CA 90006, USA</td>
+                                <td class="datatable__cell-2"><strong> 3</strong> %
+                                </td>
+                                <td class="datatable__cell-3">23,351</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1026 Ohio Avenue Long Beach, CA 90804, USA</td>
+                                <td class="datatable__cell-2"><strong> 1</strong> %
+                                </td>
+                                <td class="datatable__cell-3">2750</td>
+                                <td class="datatable__cell-4">19 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">514 East Myrtle Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2">$<strong>400</strong>
+                                </td>
+                                <td class="datatable__cell-3">879,560</td>
+                                <td class="datatable__cell-4">20 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1230 Martin Luther King Los Angeles, CA 90037, USA</td>
+                                <td class="datatable__cell-2"><strong> 5</strong> %
+                                </td>
+                                <td class="datatable__cell-3">448,386</td>
+                                <td class="datatable__cell-4">22 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">401 South Sycamore Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2"><strong> 7</strong> %
+                                </td>
+                                <td class="datatable__cell-3">18,780</td>
+                                <td class="datatable__cell-4">25 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">649 West Adams Boulevard Los Angeles, CA 90007, USA</td>
+                                <td class="datatable__cell-2">$<strong>300</strong>
+                                </td>
+                                <td class="datatable__cell-3">3,110</td>
+                                <td class="datatable__cell-4">28 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">958 Dewey Avenue Los Angeles, CA 90006, USA</td>
+                                <td class="datatable__cell-2">$<strong>50</strong>
+                                </td>
+                                <td class="datatable__cell-3">23,351</td>
+                                <td class="datatable__cell-4">30 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1026 Ohio Avenue Long Beach, CA 90804, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">211,789</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">514 East Myrtle Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">9,879,560</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;17&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1230 Martin Luther King Los Angeles, CA 90037, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">22,500</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">401 South Sycamore Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">76,780</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;19&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">649 West Adams Boulevard Los Angeles, CA 90007, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">3,000</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">958 Dewey Avenue Los Angeles, CA 90006, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">23,351</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1026 Ohio Avenue Long Beach, CA 90804, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">1,789</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">514 East Myrtle Street Santa Ana, CA 92701, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">79,560</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                              <tr data-info="&lt;table class=&quot;table table--stripped&quot;&gt;&lt;tr&gt;&lt;td&gt;Bedrooms:&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Floor:&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Area:&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status:&lt;/td&gt;&lt;td&gt;For sale &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/td&gt;&lt;td&gt;Price:&lt;/td&gt;&lt;td&gt; $402,000 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Commision:&lt;/td&gt;&lt;td&gt; 3% &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Credit:&lt;/td&gt;&lt;td&gt; $8,000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+                                <td class="datatable__cell-1">1230 West Martin Boulevard Los Angeles, CA 90037, USA</td>
+                                <td class="datatable__cell-2">$<strong>79</strong>
+                                </td>
+                                <td class="datatable__cell-3">224,386</td>
+                                <td class="datatable__cell-4">2 days ago</td>
+                                <td class="datatable__cell-5"><a href="#" class="datatable__more">View Details</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </h:panelGroup>
+                        <h:panelGroup id="modal-datatable-detail" tabindex="-1" role="dialog" class="modal modal--datatable fade">
+                          <h:panelGroup role="document" class="modal-dialog">
+                            <h:panelGroup class="modal-content">
+                              <h:panelGroup class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </h:panelGroup>
+                              <h:panelGroup class="modal-body"></h:panelGroup>
+                            </h:panelGroup>
+                          </h:panelGroup>
+                        </h:panelGroup>
+                      </h:panelGroup>
+                      
+                    </h:panelGroup>
+                  </h:panelGroup>
+                </h:panelGroup>
+                </body>
+              
+              
+  
+
+
+		
+
+	</ui:define>
+</ui:composition>
